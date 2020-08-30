@@ -2,7 +2,13 @@
 * {
   box-sizing: border-box;
 }
-
+body {
+    background: url('/media/homepage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: rgb(253, 251, 251);
+    font-family: 'Lato';
+}
 
 /*-- Top Header Start --*/
 .header_top {
@@ -112,7 +118,7 @@
   background: #242424;
 }
 .coupon_inner button:hover, .cart_submit button:hover, .checkout_btn a:hover, .order_button button:hover, .checkout_form label.righ_0:hover, .search_box button:hover, .subscribe_form form button:hover {
-	background: #fa5252;
+	background: #6306dd;
 }
 .search_box button {
     top: 0;
@@ -686,7 +692,21 @@ div .non-list{
 }
 /*--End header Mobile --*/
 
-
+.shop-now-button {
+    background: rgb(2, 14, 117);
+    color: white;
+    border-radius: 30px;
+    font-weight: 400;
+    padding: 0 20px;
+    min-width: 120px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.shop-now-button:hover{
+    background: #6306dd;
+    color: #fff;
+    text-decoration: none;
+}
 
 
 
@@ -968,3 +988,13 @@ div .non-list{
           margin: 15px;
       }
   }
+
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
