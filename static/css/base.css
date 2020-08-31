@@ -17,12 +17,16 @@ body {
 }
 .header_top {
     background: #1d1678;
+    height: 40px;
 }
 .support_info p {
   line-height: 43px;
 }
 .support_info a {
   color: #fafafa;
+}
+.support_info_mobile a{
+  color: #073ef5;
 }
 .support_info p a:hover {
   color: #c1c1c1;

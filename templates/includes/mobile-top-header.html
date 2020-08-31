@@ -1,0 +1,111 @@
+<div class="Offcanvas_menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div id="main" class="canvas_open">
+					<a onclick="openNav()">
+						<i class="fas fa-bars"></i>
+					</a>
+				</div>
+				<div id="mySidebar" class="Offcanvas_menu_wrapper">
+                    <div class="canvas_close">
+					<a href="javascript:void(0)"  onclick="closeNav()">
+						<i class="fas fa-times"></i>
+					</a>
+                    </div>
+                    <div class="support_info support_info_mobile">
+                        <p>Email: <a href="mailto:">suport@occasionfotovideo.com</a></p>
+                    </div>
+                    <div class="top_right text-right">
+
+                    </div>
+                    <div class="search_container">
+                       <form method="GET" action="#">
+                            <div class="search_box">
+                                <input name="q" placeholder="Search product..." type="text">
+                                <button type="submit">Search</button>
+                            </div>
+                        </form>
+                    </div>
+							<div class="middel_right_info">
+								<li class="list-inline-item dropdown">
+									<a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<div class="text-center">
+											<div>
+												<img src="/media/user.png" alt="">
+												</div>
+											</div>
+										</a>
+										<div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    
+											<a href="" class="dropdown-item">Product Management</a>
+                                {% endif %}
+                                
+											<a href="" class="dropdown-item">My Profile</a>
+											<a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% else %}
+                                
+											<a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+											<a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            {% endif %}
+                        
+										</div>
+									</li>
+									<!--mini cart-->
+									<div class="mini_cart_wrapper">
+										<a href="javascript:void(0)">
+											<img src="/media/shopping-bag.png" alt="">
+											</a>
+											<span class="{% if true %}cart_quantity-green{% else %}cart_quantity{% endif %}">
+                             {% if grand_total %}
+                                 ${{ grand_total|floatformat:2 }}
+                             {% else %}
+                                0
+                             {% endif %}
+                            </span>
+										</div>
+										<!--mini cart end-->
+									</div>
+
+                    <div  class="text-left ">
+                        <ul class="offcanvas_main_menu non-list">
+                            <li class="menu-item-has-children active">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="product-details.html">All Products</a>
+                            </li>
+                            <li class="menu-item-has-children dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Video</a>
+                                <ul class="sub-menu non-list dropdown-menu">
+                                    <li><a href="#">Wedding</a></li>
+                                    <li><a href="#">Engagement</a></li>
+                                    <li><a href="#">Baptism</a></li>
+                                    <li><a href="#">Student</a></li>
+                                    <li><a href="#">First Communion</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Photo</a>
+                                <ul class="sub-menu non-list dropdown-menu">
+                                    <li><a href="#">Wedding</a></li>
+                                    <li><a href="#">Engagement</a></li>
+                                    <li><a href="#">Baptism</a></li>
+                                    <li><a href="#">Student</a></li>
+                                    <li><a href="#">First Communion</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="contact.html"> Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
