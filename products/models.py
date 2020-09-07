@@ -41,6 +41,7 @@ class Product(models.Model):
     occasion = models.ForeignKey('Occasion', null=True, blank=True, on_delete=models.SET_NULL)
     package = models.ForeignKey('Package', null=True, blank=True, on_delete=models.SET_NULL)
     description = models.TextField()
+    things_include = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
