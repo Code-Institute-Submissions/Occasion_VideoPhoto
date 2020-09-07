@@ -1,0 +1,50 @@
+[
+  {
+    "pk": 1,
+    "model": "products.package",
+    "fields": {
+      "name": "gold",
+      "friendly_name": "Gold"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.package",
+    "fields": {
+      "name": "silver",
+      "friendly_name": "Silver"
+    }
+},
+{
+  "pk": 3,
+  "model": "products.package",
+  "fields": {
+    "name": "bronze",
+    "friendly_name": "Bronze"
+  }
+},
+{
+  "pk": 4,
+  "model": "products.package",
+  "fields": {
+    "name": "short_film",
+    "friendly_name": "Short Film"
+  }
+},
+{
+  "pk": 5,
+  "model": "products.package",
+  "fields": {
+    "name": "highlight",
+    "friendly_name": "Highlight"
+  }
+},
+{
+  "pk": 6,
+  "model": "products.package",
+  "fields": {
+    "name": "reception",
+    "friendly_name": "Reception"
+  }
+}
+]

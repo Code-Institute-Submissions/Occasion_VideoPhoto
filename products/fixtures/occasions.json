@@ -1,0 +1,42 @@
+[
+  {
+    "pk": 1,
+    "model": "products.occasion",
+    "fields": {
+      "name": "wedding",
+      "friendly_name": "Wedding"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.occasion",
+    "fields": {
+      "name": "engagement",
+      "friendly_name": "Engagement"
+    }
+},
+{
+  "pk": 3,
+  "model": "products.occasion",
+  "fields": {
+    "name": "baptism",
+    "friendly_name": "Baptism"
+  }
+},
+{
+  "pk": 4,
+  "model": "products.occasion",
+  "fields": {
+    "name": "student",
+    "friendly_name": "Student"
+  }
+},
+{
+  "pk": 5,
+  "model": "products.occasion",
+  "fields": {
+    "name": "first_communion",
+    "friendly_name": "First Communion"
+  }
+}
+]

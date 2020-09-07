@@ -1,0 +1,44 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "category": 1,
+      "occasion": 1,
+      "package": 2,
+      "description": "Ease your mind and let us film your ceremony and reception highlights!! Video Creations will capture your day in stunning high definition video and crystal clear audio of your vows, music, officiant, and readers along with all the festivities of your reception. We will then produce a beautiful, professionally edited DVD, Bluray, USB Thumbdrive, or On-line video for you to enjoy and share for a lifetime.",
+      "price": 1000,
+      "rating": 4.6,
+      "image_url": "",
+      "image": "video.jpg"
+    }
+  },
+  {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "category": 2,
+        "occasion": 5,
+        "package": 5,
+        "description": "Bring us your “raw” video footage from any source – cell phones, iPads, still cameras, video cameras, etc, taken by your friends and family, and we will produce a beautiful professionally edited, Hollywood style highlight video of your special day!! Have your  friends and family capture all the memorable events of your day.",
+        "price": 500,
+        "rating": 4.6,
+        "image_url": "",
+        "image": "photo.jpg"
+    }
+  },
+  {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "category": 1,
+        "occasion": 3,
+        "package": 2,
+        "description": "Bring us your “raw” video footage from any source – cell phones, iPads, still cameras, video cameras, etc, taken by your friends and family, and we will produce a beautiful professionally edited, Hollywood style highlight video of your special day!! Have your  friends and family capture all the memorable events of your day.",
+        "price": 1000,
+        "rating": 4.6,
+        "image_url": "",
+        "image": "video.jpg"
+    }
+  }
+]
