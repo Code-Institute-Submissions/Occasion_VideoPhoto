@@ -736,7 +736,20 @@ div .non-list{
 
 /*--End bg area --*/
 
+/*--Pruducts area --*/
 
+.overlay{
+    height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
+
+/*--End Products area --*/
 
 /*--footer area --*/
 
@@ -761,7 +774,14 @@ div .non-list{
   text-decoration: underline;
   color: #1D1678;
 }
-
+footer {
+    padding-top: 3px; 
+    position: absolute;
+    height: 30px;
+    margin-bottom: 0;
+    bottom: 0;
+    width: 100%;
+}
 
 
 /*-- End footer area  --*/
@@ -1020,7 +1040,13 @@ div .non-list{
     transition: 0.3s;
     font-size: 10px;
 
-}
+    }
+    .footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+ }
 
   }
 
