@@ -19,8 +19,8 @@
   "pk": 3,
   "model": "products.package",
   "fields": {
-    "name": "bronze",
-    "friendly_name": "Bronze"
+    "name": "platinum",
+    "friendly_name": "Platinum"
   }
 },
 {
