@@ -5,6 +5,7 @@ from .models import Product, Category, Occasion, Package
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
+        "get_product",
         "category",
         "occasion",
         "package",
@@ -12,7 +13,11 @@ class ProductAdmin(admin.ModelAdmin):
         "rating",
         "image",
     )
-    ordering = ("category",)
+
+    def get_product(self, obj):
+        return obj.category.friendly_name + " - " + obj.occasion.friendly_name
+    get_product.admin_order_field = "name"
+    get_product.short_description = 'Product Name' 
 
 
 class CategoryAdmin(admin.ModelAdmin):
