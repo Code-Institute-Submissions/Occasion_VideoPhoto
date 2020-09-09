@@ -55,4 +55,7 @@ class Product(models.Model):
         return self.category.name + " - " + self.occasion.name
 
     def thingsInclude_as_list(self):
-        return self.things_include.split(',') 
+        return self.things_include.split(',')
+
+    def get_name_categoryOccasion(self):
+        return self.category.name + " " + self.occasion.name
