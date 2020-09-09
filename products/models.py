@@ -53,3 +53,6 @@ class Product(models.Model):
 
     def __str__(self):
         return self.category.name + " - " + self.occasion.name
+
+    def thingsInclude_as_list(self):
+        return self.things_include.split(',') 

@@ -14,68 +14,58 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="logo-font">Products</h2>
+                <h2 class="logo-font">Product Details</h2>
                 <hr class="w-50 mb-1">
             </div>
         </div>
         <div class="row">
             <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2"></div>
-                <div class="row">
-                    {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
-                                {% if product.image %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
-                                {% else %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class="mb-0 font-weight-bold">{{ product.category.friendly_name }} - {{ product.occasion.friendly_name}}</p>
-                                    <p class="mb-0 font-weight-bold">{{ product.package.friendly_name }} Package</p> 
-                                    <hr>
-                                    <p>{{ product.short_description}}</p>
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                                            {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                            {% else %}
-                                                <small class="text-muted">No Rating</small>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <!--product details start-->
+    <div class="product_details mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                   <div class="product-details-tab">
+                        <div id="img-1" class="zoomWrapper single-zoom">
+                            <a href="#">
+                                <img id="zoom1" src="{{ product.image.url }}" data-zoom-image="{{ product.image.url }}" alt="big-1">
+                            </a>
                         </div>
-                        {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}                        
-                        {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:4 %}
-                            <div class="col-12 d-none d-xl-block mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
+
+                    </div>
                 </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="product_d_right">
+                       <form action="#">
+                            <h1>{{ product.category.friendly_name }} - {{ product.occasion.friendly_name}}</h1>
+                            <div class=" product_ratting">
+                                <p class="mb-0 font-weight-bold">{{ product.package.friendly_name }} Package</p>
+                            </div>
+                            <div class="price_box">
+                                <span class="current_price">$70.00</span>
+                                <span class="old_price">$80.00</span>
+                            </div>
+                            <div class="product_desc">
+                            <p>{{ product.long_description}}</p>
+                            {% for x in product.thingsInclude_as_list %}
+                                <ul>
+                                    <li>{{ x }}</li>
+                                </ul>
+                             {% endfor %}
+                            </div>
+                            <div class="product_variant quantity">
+                                <label>quantity</label>
+                                <input min="1" max="100" value="1" type="number">
+                                <button class="button" type="submit">add to cart</button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--product details end-->
             </div>
         </div>
     </div>
