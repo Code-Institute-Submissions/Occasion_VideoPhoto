@@ -93,22 +93,22 @@
                                         <li><a href="#">home</a></li>
                                         <li><a href="{% url 'products'%}">All Products</a></li>
 
-                                        <li><a class="active" href="#">Video <i class="fa fa-angle-down"></i></a>
+                                        <li><a class="active" href="{% url 'products'%}?category=video">Video <i class="fa fa-angle-down"></i></a>
                                             <ul class="sub_menu pages non-list">
-                                                <li><a href="#">Wedding</a></li>
-                                                <li><a href="#">Engagement</a></li>
-                                                <li><a href="#">Baptism</a></li>
-                                                <li><a href="#">Student</a></li>
-                                                <li><a href="#">First Communion</a></li>
+                                                <li><a href="{% url 'products' %}?occasion=wedding">Wedding</a></li>
+                                                <li><a href="{% url 'products'%}?occasion=engagement">Engagement</a></li>
+                                                <li><a href="{% url 'products'%}?occasion=baptism">Baptism</a></li>
+                                                <li><a href="{% url 'products'%}?occasion=student">Student</a></li>
+                                                <li><a href="{% url 'products'%}?occasion=first_communion">First Communion</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Photo<i class="fa fa-angle-down"></i></a>
+                                        <li><a href="{% url 'products'%}?category=photo">Photo<i class="fa fa-angle-down"></i></a>
                                             <ul class="sub_menu pages non-list">
-                                                <li><a href="#">Wedding</a></li>
-                                                <li><a href="#">Engagement</a></li>
-                                                <li><a href="#">Baptism</a></li>
-                                                <li><a href="#">Student</a></li>
-                                                <li><a href="#">First Communion</a></li>
+                                                 <li><a href="{% url 'products'%}?occasion=wedding">Wedding</a></li>
+                                                <li><a href="{% url 'products'%}?occasion=engagement">Engagement</a></li>
+                                                <li><a href="{% url 'products'%}?occasion=baptism">Baptism</a></li>
+                                                <li><a href="{% url 'products'%}?occasion=student">Student</a></li>
+                                                <li><a href="{% url 'products'%}?occasion=first_communion">First Communion</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="contact.html"> Contact Us</a></li>
