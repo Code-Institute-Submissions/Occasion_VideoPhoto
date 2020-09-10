@@ -736,6 +736,21 @@ div .non-list{
 	background: white;
 	z-index: -1;
 }
+.package-bg-silver{
+    display: table; /* keep the background color wrapped tight */
+    padding:4px;font-size:15px;background-color:#C0C0C0;color:black;
+    border-radius: 20px;
+}
+.package-bg-gold{
+    display: table; /* keep the background color wrapped tight */
+    padding:4px;font-size:15px;background-color:#FFD700;color:black;
+    border-radius: 20px;
+}
+.package-bg-platinum{
+    display: table; /* keep the background color wrapped tight */
+    padding:4px;font-size:15px;background-color:#584f3f;color:#ffffff;
+    border-radius: 20px;
+}
 
 
 /*--End Products area --*/

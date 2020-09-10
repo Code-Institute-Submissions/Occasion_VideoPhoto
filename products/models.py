@@ -60,4 +60,4 @@ class Product(models.Model):
         return self.category.friendly_name + " " + self.occasion.friendly_name
 
     def get_shortDescription(self):
-        return self.long_description[:100]
+        return self.description[:100]

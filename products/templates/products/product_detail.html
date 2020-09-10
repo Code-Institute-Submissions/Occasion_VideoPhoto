@@ -39,7 +39,15 @@
                        <form action="#">
                             <h1>{{ product.category.friendly_name }} - {{ product.occasion.friendly_name}}</h1>
                             <div class=" product_ratting">
-                                <p class="mb-0 font-weight-bold">{{ product.package.friendly_name }} Package</p>
+                            {% if product.package.friendly_name == "Silver" %}
+                                <p class="mb-0 font-weight-bold package-bg-silver">{{ product.package.friendly_name }} Package</p>
+                            {% elif product.package.friendly_name == "Gold" %} 
+                                <p class="mb-0 font-weight-bold package-bg-gold">{{ product.package.friendly_name }} Package</p> 
+                            {% elif product.package.friendly_name == "Platinum" %} 
+                                <p class="mb-0 font-weight-bold package-bg-platinum">{{ product.package.friendly_name }} Package</p> 
+                            {% else %}
+                                <p class="mb-0 font-weight-bold ">{{ product.package.friendly_name }} Package</p>        
+                            {% endif %}    
                             </div>
                             <div class="price_box">
                                 <span class="current_price">$70.00</span>

@@ -36,7 +36,27 @@
                                 {% endif %}
                                 <div class="card-body pb-0">
                                     <p class="mb-0 font-weight-bold">{{ product.category.friendly_name }} - {{ product.occasion.friendly_name}}</p>
-                                    <p class="mb-0 font-weight-bold">{{ product.package.friendly_name }} Package</p> 
+                                    {% if product.package.friendly_name == "Silver" %}
+                                    <p class="mb-0 font-weight-bold package-bg-silver">
+                                    <span>
+                                    {{ product.package.friendly_name }} Package
+                                    </span></p> 
+                                    {% elif product.package.friendly_name == "Gold" %}  
+                                    <p class="mb-0 font-weight-bold package-bg-gold">
+                                    <span>
+                                    {{ product.package.friendly_name }} Package
+                                    </span></p>
+                                    {% elif product.package.friendly_name == "Platinum" %}  
+                                    <p class="mb-0 font-weight-bold package-bg-platinum">
+                                    <span>
+                                    {{ product.package.friendly_name }} Package
+                                    </span></p> 
+                                    {% else %}
+                                    <p class="mb-0 font-weight-bold">
+                                    <span>
+                                    {{ product.package.friendly_name }} Package
+                                    </span></p>
+                                    {% endif %}
                                     <hr>
                                     <p>{{ product.get_shortDescription}}...</p>
                                 </div>
