@@ -751,6 +751,20 @@ div .non-list{
     padding:4px;font-size:15px;background-color:#584f3f;color:#ffffff;
     border-radius: 20px;
 }
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color:#3e51eb;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
 
 
 /*--End Products area --*/
