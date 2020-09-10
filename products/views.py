@@ -12,7 +12,22 @@ def all_products(request):
     query = None
     categories = None
     occasions = None
+    sort = None
+    direction = None
     if request.GET:
+        # Sort function 
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                products = products.annotate(lower_name=Lower('name'))
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            products = products.order_by(sortkey)
+        # Filtering function
         if 'category' in request.GET:
             categories = request.GET['category'].split(",")
             products = products.filter(category__name__in=categories)
@@ -21,6 +36,7 @@ def all_products(request):
             occasions = request.GET['occasion'].split(",")
             products = products.filter(occasion__name__in=occasions)
             occasions = Occasion.objects.filter(name__in=occasions)
+       # Search function     
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -29,12 +45,14 @@ def all_products(request):
 
             queries = Q(category__friendly_name__icontains=query) | Q(description__icontains=query) | Q(things_include__icontains=query) | Q(package__friendly_name__icontains=query) | Q(occasion__friendly_name__icontains=query)
             products = products.filter(queries)
+    current_sorting = f'{sort}_{direction}'        
 
     context = {
         "products": products,
         "search_term": query,
         "current_categories": categories,
         "current_occasions": occasions,
+        "current_sorting": current_sorting,
 
     }
     return render(request, "products/products.html", context)

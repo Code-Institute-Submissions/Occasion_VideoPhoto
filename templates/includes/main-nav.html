@@ -91,8 +91,14 @@
                                 <nav>
                                     <ul>
                                         <li><a href="{% url 'home' %}">home</a></li>
-                                        <li><a href="{% url 'products'%}">All Products</a></li>
-
+                                        <li><a class="active" href="{% url 'products'%}">Products<i class="fa fa-angle-down"></i></a>
+                                            <ul class="sub_menu pages non-list">
+                                                <li><a href="{% url 'products' %}?sort=price&direction=acs">By Price</a></li>
+                                                <li><a href="{% url 'products' %}?sort=rating&direction=desc">By Rating</a></li>
+                                                <li><a href="{% url 'products' %}?sort=category&direction=acs">By Category</a></li>
+                                                <li><a href="{% url 'products'%}">All Products</a></li>
+                                            </ul>
+                                        </li>
                                         <li><a class="active" href="{% url 'products'%}?category=video">Video <i class="fa fa-angle-down"></i></a>
                                             <ul class="sub_menu pages non-list">
                                                 <li><a href="{% url 'products' %}?occasion=wedding&category=video">Wedding</a></li>
