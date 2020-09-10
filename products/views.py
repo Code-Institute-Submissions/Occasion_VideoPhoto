@@ -36,7 +36,7 @@ def all_products(request):
             occasions = request.GET['occasion'].split(",")
             products = products.filter(occasion__name__in=occasions)
             occasions = Occasion.objects.filter(name__in=occasions)
-       # Search function     
+       # Search function
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -45,7 +45,7 @@ def all_products(request):
 
             queries = Q(category__friendly_name__icontains=query) | Q(description__icontains=query) | Q(things_include__icontains=query) | Q(package__friendly_name__icontains=query) | Q(occasion__friendly_name__icontains=query)
             products = products.filter(queries)
-    current_sorting = f'{sort}_{direction}'        
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         "products": products,
