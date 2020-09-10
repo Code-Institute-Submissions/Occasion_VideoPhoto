@@ -43,8 +43,7 @@ class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     occasion = models.ForeignKey('Occasion', null=True, blank=True, on_delete=models.SET_NULL)
     package = models.ForeignKey('Package', null=True, blank=True, on_delete=models.SET_NULL)
-    long_description = models.TextField()
-    short_description = models.TextField()
+    description = models.TextField()
     things_include = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
@@ -58,4 +57,7 @@ class Product(models.Model):
         return self.things_include.split(',')
 
     def get_name_categoryOccasion(self):
-        return self.category.name + " " + self.occasion.name
+        return self.category.friendly_name + " " + self.occasion.friendly_name
+
+    def get_shortDescription(self):
+        return self.long_description[:100]
