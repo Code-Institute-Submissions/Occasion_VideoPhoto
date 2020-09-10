@@ -78,23 +78,23 @@
                                 <a href="{% url 'products'%}">All Products</a>
                             </li>
                             <li class="menu-item-has-children dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Video</a>
+                                <a href="{% url 'products'%}?category=video" class="dropdown-toggle" data-toggle="dropdown">Video</a>
                                 <ul class="sub-menu non-list dropdown-menu">
-                                    <li><a href="#">Wedding</a></li>
-                                    <li><a href="#">Engagement</a></li>
-                                    <li><a href="#">Baptism</a></li>
-                                    <li><a href="#">Student</a></li>
-                                    <li><a href="#">First Communion</a></li>
+                                    <li><a href="{% url 'products' %}?occasion=wedding&category=video">Wedding</a></li>
+                                    <li><a href="{% url 'products'%}?occasion=engagement&category=video">Engagement</a></li>
+                                    <li><a href="{% url 'products'%}?occasion=baptism&category=video">Baptism</a></li>
+                                    <li><a href="{% url 'products'%}?occasion=student&category=video">Student</a></li>
+                                    <li><a href="{% url 'products'%}?occasion=first_communion&category=video">First Communion</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item-has-children dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Photo</a>
+                                <a href="{% url 'products'%}?category=photo" class="dropdown-toggle" data-toggle="dropdown">Photo</a>
                                 <ul class="sub-menu non-list dropdown-menu">
-                                    <li><a href="#">Wedding</a></li>
-                                    <li><a href="#">Engagement</a></li>
-                                    <li><a href="#">Baptism</a></li>
-                                    <li><a href="#">Student</a></li>
-                                    <li><a href="#">First Communion</a></li>
+                                        <li><a href="{% url 'products'%}?occasion=wedding&category=photo">Wedding</a></li>
+                                    <li><a href="{% url 'products'%}?occasion=engagement&category=photo">Engagement</a></li>
+                                    <li><a href="{% url 'products'%}?occasion=baptism&category=photo">Baptism</a></li>
+                                    <li><a href="{% url 'products'%}?occasion=student&category=photo">Student</a></li>
+                                    <li><a href="{% url 'products'%}?occasion=first_communion&category=photo">First Communion</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">

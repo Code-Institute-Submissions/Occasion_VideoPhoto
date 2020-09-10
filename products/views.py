@@ -17,7 +17,7 @@ def all_products(request):
             categories = request.GET['category'].split(",")
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
-        elif 'occasion' in request.GET:
+        if 'occasion' in request.GET:
             occasions = request.GET['occasion'].split(",")
             products = products.filter(occasion__name__in=occasions)
             occasions = Occasion.objects.filter(name__in=occasions)
