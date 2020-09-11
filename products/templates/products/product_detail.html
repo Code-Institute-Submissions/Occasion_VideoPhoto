@@ -36,7 +36,8 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="product_d_right">
-                       <form action="#">
+                       <form action="{% url 'add_to_bag' product.id %}" method="POST">
+                            {% csrf_token %}
                             <h1>{{ product.category.friendly_name }} - {{ product.occasion.friendly_name}}</h1>
                             <div class=" product_ratting">
                             {% if product.package.friendly_name == "Silver" %}
@@ -50,8 +51,8 @@
                             {% endif %}    
                             </div>
                             <div class="price_box">
-                                <span class="current_price">$70.00</span>
-                                <span class="old_price">$80.00</span>
+                                <span class="new_price">${{ product.get_new_price}}</span>
+                                <span class="discount-note">(30% of the full price)</span>
                             </div>
                             <div class="product_desc">
                             <p>{{ product.description}}</p>
@@ -63,9 +64,9 @@
                             </div>
                             <div class="product_variant quantity">
                                 <label>quantity</label>
-                                <input min="1" max="100" value="1" type="number">
+                                <input min="1" max="99" name="quantity" value="1" type="number" data-item_id="{{ product.id}}" id="id_qty_{{ product.id}}">
                                 <button class="button" type="submit">add to cart</button>
-
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </div>
                         </form>
                     </div>

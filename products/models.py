@@ -1,4 +1,6 @@
 from django.db import models
+from django.conf import settings
+from decimal import Decimal
 
 # Create your models here.
 
@@ -61,3 +63,6 @@ class Product(models.Model):
 
     def get_shortDescription(self):
         return self.description[:100]
+
+    def get_new_price(self):
+        return round(self.price * Decimal(settings.PRECENT_ADVANCE_PAYMENT_OF_FULL_PRICE), 0)

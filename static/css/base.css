@@ -1440,10 +1440,10 @@ div .non-list{
 .product_d_right .price_box {
   margin-bottom: 14px;
 }
-.product_d_right .price_box span.current_price {
+.product_d_right .price_box span.new_price {
   font-size: 23px;
 }
-.product_d_right .price_box span.old_price {
+.product_d_right .price_box span.discount-note{
   font-size: 20px;
 }
 .product_d_right .product_desc {
@@ -1493,13 +1493,12 @@ div .non-list{
 .price_box {
   margin-bottom: 13px;
 }
-.price_box span.old_price {
-  text-decoration: line-through;
+.price_box span.discount-note {
   font-weight: 400;
   font-size: 14px;
   margin-right: 5px;
 }
-.price_box span.current_price {
+.price_box span.new_price {
   color: #1D1678;
   font-weight: 600;
   font-size: 16px;
@@ -1879,7 +1878,7 @@ div .non-list{
    .product_d_right .price_box {
     margin-bottom: 14px;
     }
-    .product_d_right .price_box span.current_price {
+    .product_d_right .price_box span.new_price {
     font-size: 18px;
     }
     .product_d_right .price_box span.old_price {
@@ -1892,7 +1891,7 @@ div .non-list{
     .product_list_item .product_ratting {
     margin-bottom: 10px;
     }
-    .price_box span.current_price {
+    .price_box span.new_price {
     font-size: 14px;
     }
     .product_variant.quantity {
