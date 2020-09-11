@@ -6,6 +6,10 @@ body {
     background:linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url('/media/homepage.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
 
     
 }
@@ -1405,6 +1409,7 @@ div .non-list{
 #sticky-footer {
   flex-shrink: none;
 }
+
 
 
 
