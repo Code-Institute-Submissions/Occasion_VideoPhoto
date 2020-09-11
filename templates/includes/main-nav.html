@@ -66,9 +66,9 @@
 										<a href="{% url 'view_bag'%}">
 											<img src="/media/shopping-bag.png" alt="">
 											</a>
-											<span class="{% if true %}cart_quantity-green{% else %}cart_quantity{% endif %}">
-                             {% if grand_total %}
-                                 ${{ grand_total|floatformat:2 }}
+											<span class="{% if bag_items %}cart_quantity-green{% else %}cart_quantity{% endif %}">
+                             {% if product_count %}
+                                 {{ product_count }}
                              {% else %}
                                 0
                              {% endif %}

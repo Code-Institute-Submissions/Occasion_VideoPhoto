@@ -19,5 +19,4 @@ def add_to_bag(request, item_id):
         bag[item_id] = quantity
 
     request.session['bag'] = bag ## put the bag variable into the session. Which itself is just a python dictionary.
-    print(request.session['bag'])
     return redirect(redirect_url)

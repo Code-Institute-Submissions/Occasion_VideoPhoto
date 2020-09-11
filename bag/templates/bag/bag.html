@@ -39,14 +39,16 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                {% for item in bag_items%}
                                 <tr>
                                     <td class="product_thumb"><a href="#"><img src="assets/img/s-product/product.jpg" alt=""></a></td>
-                                    <td class="product_name"><a href="#">video - wedding</a></td>
-                                    <td class="product-price">$3000.00</td>
-                                    <td class="product_quantity"><label>Quantity</label> <input min="1" max="100" value="1" type="number"></td>
-                                    <td class="product_total">$3000.00</td>
+                                    <td class="product_name"><a href="#">{{ item.product.category.friendly_name }} - {{ item.product.occasion.friendly_name}}</a></td>
+                                    <td class="product-price">${{ item.product.get_new_price }}</td>
+                                    <td class="product_quantity"><label>{{ item.product_count }}</label> <input min="1" max="100" value="1" type="number"></td>
+                                    <td class="product_total">${{ item.grand_total }}</td>
 									<td class="product_remove"><a href="#"><i class="far fa-times-circle"></i></a></td>
                                 </tr>
+                                {% endfor %}
                             </tbody>
                         </table>   
                             </div>  
@@ -67,7 +69,7 @@
 								<div class="coupon_inner">
 									<div class="cart_subtotal">
 										<p>Total</p>
-										<p class="cart_amount">$215.00</p>
+										<p class="cart_amount">${{ item.grand_total }}</p>
 									</div>
 									<hr>
 				
