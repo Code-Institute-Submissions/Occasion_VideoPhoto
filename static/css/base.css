@@ -1683,6 +1683,17 @@ div .non-list{
   .product_variant.quantity button {
     min-width: 170px;
   }
+  .checkout_btn a {
+  background: #1D1678;
+  color: #ffffff;
+  font-size: 9px;
+  padding: 3px 14px;
+  line-height: 16px;
+  font-weight: 600;
+  display: inline-block;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
 
 }
   @media only screen and (max-width: 767px) {
@@ -1897,6 +1908,17 @@ div .non-list{
   .reverse{
       flex-direction: column-reverse;
   }
+    .checkout_btn a {
+  background: #1D1678;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 3px 14px;
+  line-height: 20px;
+  font-weight: 600;
+  display: inline-block;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
 
   }
 
