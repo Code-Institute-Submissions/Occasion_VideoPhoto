@@ -11,22 +11,13 @@
 
  {% block content %}
 <div class="overlay"></div>
-    <!--breadcrumbs area start-->
-    <div class="breadcrumbs_area">
-        <div class="container">   
-            <div class="row">
-                <div class="col-12">
-                    <div class="breadcrumb_content">
-                        <ul>
-                            <li><a href="index-2.html">home</a></li>
-                            <li>Cart</li>
-                        </ul>
-                    </div>
-                </div>
+<div class="container">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Shopping Bag</h2>
+                <hr class="w-50 mb-1">
             </div>
-        </div>         
-    </div>
-    <!--breadcrumbs area end-->
+        </div>
 <!--shopping cart area start -->
     <div class="shopping_cart_area mt-100">
         <div class="container">  
@@ -49,27 +40,17 @@
                             <tbody>
                                 <tr>
                                     <td class="product_thumb"><a href="#"><img src="assets/img/s-product/product.jpg" alt=""></a></td>
-                                    <td class="product_name"><a href="#">Handbag fringilla</a></td>
-                                    <td class="product-price">$65.00</td>
+                                    <td class="product_name"><a href="#">video - wedding</a></td>
+                                    <td class="product-price">$3000.00</td>
                                     <td class="product_quantity"><label>Quantity</label> <input min="1" max="100" value="1" type="number"></td>
-                                    <td class="product_total">$130.00</td>
-									<td class="product_remove"><a href="#"><i class="ion-android-close"></i></a></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="product_thumb"><a href="#"><img src="assets/img/s-product/product2.jpg" alt=""></a></td>
-                                    <td class="product_name"><a href="#">Handbags justo</a></td>
-                                    <td class="product-price">$90.00</td>
-                                    <td class="product_quantity"><label>Quantity</label> <input min="1" max="100" value="1" type="number"></td>
-                                    <td class="product_total">$180.00</td>
+                                    <td class="product_total">$3000.00</td>
 									<td class="product_remove"><a href="#"><i class="far fa-times-circle"></i></a></td>
                                 </tr>
-
                             </tbody>
                         </table>   
                             </div>  
                             <div class="cart_submit">
-                                <button type="submit">update cart</button>
+                                <button type="submit">update bag</button>
                             </div>      
                         </div>
                     </div>
@@ -77,29 +58,19 @@
                 <!--Cart Totals area start-->
                 <div class="coupon_area">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6">
-
-                        </div>
-                        <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-6 col-md-6 ">
                             <div class="coupon_code right">
-                                <h3>Cart Totals</h3>
+                                <h3>Bag Totals</h3>
                                 <div class="coupon_inner">
                                 <div class="cart_subtotal">
-                                    <p>Subtotal</p>
-                                    <p class="cart_amount">$215.00</p>
-                                </div>
-                                <div class="cart_subtotal ">
-                                    <p>Shipping</p>
-                                    <p class="cart_amount"><span>Flat Rate:</span> $255.00</p>
-                                </div>
-                                <a href="#">Calculate shipping</a>
-
-                                <div class="cart_subtotal">
                                     <p>Total</p>
-                                    <p class="cart_amount">$215.00</p>
+                                    <p class="cart_amount">$3500.00</p>
                                 </div>
-                                <div class="checkout_btn">
+                                <div class="row">
+                                <div class="col checkout_btn">
+                                <a href="#"> <i class="fas fa-angle-double-left"></i> keep shoping</a>                        
                                     <a href="#">Proceed to Checkout</a>
+                                </div>   
                                 </div>
                                 </div>
                             </div>
@@ -110,5 +81,6 @@
             </form> 
         </div>     
     </div>
+</div>
     <!--shopping cart area end -->
  {% endblock %} 
