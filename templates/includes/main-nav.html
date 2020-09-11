@@ -63,7 +63,7 @@
 									</li>
 									<!--mini cart-->
 									<div class="mini_cart_wrapper">
-										<a href="javascript:void(0)">
+										<a href="{% url 'view_bag'%}">
 											<img src="/media/shopping-bag.png" alt="">
 											</a>
 											<span class="{% if true %}cart_quantity-green{% else %}cart_quantity{% endif %}">
@@ -73,8 +73,8 @@
                                 0
                              {% endif %}
                             </span>
-										</div>
-										<!--mini cart end-->
+									</div>
+									<!--mini cart end-->
 									</div>
 								</div>
 							</div>
