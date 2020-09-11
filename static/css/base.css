@@ -1894,6 +1894,9 @@ div .non-list{
     .breadcrumbs_area {
     padding: 12px 0;
   }
+  .reverse{
+      flex-direction: column-reverse;
+  }
 
   }
 
