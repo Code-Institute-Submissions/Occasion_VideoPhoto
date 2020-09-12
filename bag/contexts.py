@@ -20,7 +20,7 @@ def bag_contects(request):
             'item_id': item_id,
             'quantity': quantity,
             'product': product,
-            'prod_quat': prod_qty,
+            'prod_qty': prod_qty,
         })
 
     grand_total = total
