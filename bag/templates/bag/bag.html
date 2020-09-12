@@ -45,7 +45,7 @@
                                     <td class="product_name"><a href="#">{{ item.product.category.friendly_name }} - {{ item.product.occasion.friendly_name}}</a></td>
                                     <td class="product-price">${{ item.product.get_new_price }}</td>
                                     <td class="product_quantity"><input min="1" max="100" value="{{ item.quantity }}" type="number"></td>
-                                    <td class="product_total">${{ item.grand_total }}</td>
+                                    <td class="product_total">${{ item.prod_quat |floatformat:0}}</td>
 									<td class="product_remove"><a href="#"><i class="far fa-times-circle"></i></a></td>
                                 </tr>
                             </tbody>
@@ -69,7 +69,7 @@
 								<div class="coupon_inner">
 									<div class="cart_subtotal">
 										<p>Total</p>
-										<p class="cart_amount">${{ item.grand_total }}</p>
+										<p class="cart_amount">${{ grand_total |floatformat:0 }}</p>
 									</div>
 									<hr>
 				
