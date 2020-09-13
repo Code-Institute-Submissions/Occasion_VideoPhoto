@@ -76,7 +76,7 @@
 									<div class="row reverse">
 										<div class="col-lg-6 col-md-6">
 											<div class="checkout_btn">
-												<a href="#"> <i class="fas fa-angle-double-left"></i> keep shoping</a>
+												<a href="{% url 'products' %}"> <i class="fas fa-angle-double-left"></i> keep shoping</a>
 											</div>
 										</div>
 										<div class="col-lg-6 col-md-6">
@@ -93,7 +93,7 @@
                 <!--Cart Totals area end-->
                 {% else%}
                     <p class="lead mb-5 text-center"><strong>Your bag is empty.</strong> </p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg mb-5">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>

@@ -95,7 +95,7 @@
                                     </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-12 col-sm-6">
+                                <div class="col-lg-6 col-md-12 col-sm-6 mnb-5">
                                 <div>
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                                 </div>
@@ -124,3 +124,8 @@
         </div>
     </div>
  {% endblock %}  
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+{% endblock %}
