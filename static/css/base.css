@@ -1932,11 +1932,14 @@ div .non-list{
       .main_header {
           padding-bottom: 0px;
       }
+      
+      
   }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .search_container {
       margin-right: 50px;
     }
+    
     .search_container form {
       width: 481px;
     }
@@ -1972,6 +1975,9 @@ div .non-list{
           padding: 10px 0;
           margin: 15px;
       }
+        .product_d_right h1 {
+    font-size: 20px;
+  }
 
   }
 
