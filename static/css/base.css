@@ -10,6 +10,7 @@ body {
   margin: 0;
   padding-bottom: 6rem;
   min-height: 100%;
+  overflow-x: hidden; 
 
     
 }
@@ -468,6 +469,10 @@ ul .non-list{
 }
 div .non-list{
    list-style-type: none;
+}
+.bg-black{
+    background-color: black;
+    color: white;
 }
 
 
