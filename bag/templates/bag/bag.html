@@ -41,19 +41,51 @@
                             {% for item in bag_items%}
                             <tbody>
                                 <tr>
-                                    <td class="product_thumb"><a href="#"><img src="assets/img/s-product/product.jpg" alt=""></a></td>
+                                    <td class="product_thumb"><a href="#"><img src="{{ item.product.image.url }}"  alt=""></a></td>
                                     <td class="product_name"><a href="#">{{ item.product.category.friendly_name }} - {{ item.product.occasion.friendly_name}}</a></td>
                                     <td class="product-price">${{ item.product.get_new_price }}</td>
-                                    <td class="product_quantity"><input min="1" max="100" value="{{ item.quantity }}" type="number"></td>
-                                    <td class="product_total">${{ item.prod_qty |floatformat:0}}</td>
-									<td class="product_remove"><a href="#"><i class="far fa-times-circle"></i></a></td>
+                                    <td >
+                                       <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+                                            {% csrf_token %}
+                                            <div class="form-group mt-3">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                                                            data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                            <span>
+                                                                <i class="fas fa-minus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <input class="form-control form-control-sm qty_input" type="number"
+                                                        name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                        data-item_id="{{ item.item_id }}"
+                                                        id="id_qty_{{ item.item_id }}">
+                                                    <div class="input-group-append">
+                                                        <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                            <span>
+                                                                <i class="fas fa-plus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </td>
+                                    <td class="product_total">${{ item.total_prod_price |floatformat:0}}</td>
+									<td><a class="remove-item" id="remove_{{ item.item_id }}"><i class="far fa-times-circle"></i></a>
+                                    </td>
+                                    
                                 </tr>
                             </tbody>
                             {% endfor %}
                         </table>   
                             </div>  
                             <div class="cart_submit">
-                                <button type="submit">update bag</button>
+                                <button class="update-link" type="submit">update bag</button>
                             </div>      
                         </div>
                     </div>
@@ -106,3 +138,28 @@
 </div>
     <!--shopping cart area end -->
  {% endblock %} 
+ {% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
+{% endblock %}
