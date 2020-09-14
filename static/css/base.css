@@ -892,6 +892,7 @@ div .non-list{
   .cart_submit {
     text-align: center;
   }
+
 }
 .cart_submit button {
   background: #1D1678;
@@ -1966,6 +1967,16 @@ div .non-list{
   text-transform: capitalize;
   margin-bottom: 0;
 }
+  .bt-minus{
+      min-width: 64px;
+      margin: auto;
+      text-align: center;
+  }
+    .bt-plus{
+        min-width: 64px;
+        margin-left: 1px;
+        text-align: center;
+  }
 
 
   }
