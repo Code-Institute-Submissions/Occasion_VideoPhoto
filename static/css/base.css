@@ -1671,6 +1671,11 @@ div .non-list{
     background: rgb(78, 78, 78);
     color: #ffffff !important;
 }
+.btn.btn-blue:disabled{
+    background-color: rgb(167, 167, 167);
+    color: #fff;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
