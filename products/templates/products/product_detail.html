@@ -27,9 +27,15 @@
                 <div class="col-lg-6 col-md-6">
                    <div class="product-details-tab">
                         <div>
-                            <a href="#">
-                                <img class="img-thumbnail"  src="{{ product.image.url }}" data-zoom-image="{{ product.image.url }}" alt="product-pic">
-                            </a>
+                                {% if product.image %}
+                                <a href="{% url 'product_detail' product.id%}">
+                                    <img class="card-img-top img-fluid img-thumbnail" src="{{ product.image.url }}" alt="{{ product.category.friendly_name }} - {{ product.occasion.friendly_name}}">
+                                </a>
+                                {% else %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img class="card-img-top img-fluid img-thumbnail"  src="{{ MEDIA_URL }}noimage.png" alt="{{ product.category.friendly_name }} - {{ product.occasion.friendly_name}}">
+                                </a>
+                                {% endif %}
                         </div>
 
                     </div>
@@ -51,6 +57,12 @@
                             <div class="price_box">
                                 <span class="new_price">${{ product.get_new_price}}</span>
                                 <span class="discount-note">(30% of the full price)</span>
+                            {% if request.user.is_superuser %}
+                                <small class="ml-3">
+                                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                </small>
+                            {% endif %}
                             </div>
                             <div class="product_desc">
                             <p>{{ product.description}}</p>

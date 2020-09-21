@@ -42,9 +42,9 @@
                                 <tr>
                                     <td class="product_thumb">
                                     {% if item.product.image %}
-                                    <a href="{% url 'product_detail' item.item_id%}"><img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}"></a> 
+                                    <a href="{% url 'product_detail' item.item_id %}"><img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.category.friendly_name }} - {{ item.product.occasion.friendly_name}}"></a> 
                                     {% else %}
-                                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.category.friendly_name }} - {{ item.product.occasion.friendly_name}}">
                                     {% endif %} 
                                     </td>
                                     <td class="product_name py-3">

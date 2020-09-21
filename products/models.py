@@ -66,3 +66,5 @@ class Product(models.Model):
 
     def get_new_price(self):
         return round(self.price * Decimal(settings.PRECENT_ADVANCE_PAYMENT_OF_FULL_PRICE), 0)
+    
+        
