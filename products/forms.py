@@ -6,8 +6,6 @@ class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Product
-        #model = Occasion
-        #model = Package
         fields = '__all__'
 
     def __init__(self, *args, **kwargs): # override the init method to make a couple changes to the fields.
