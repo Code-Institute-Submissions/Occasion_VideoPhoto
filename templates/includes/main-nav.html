@@ -1,3 +1,4 @@
+ {% load  static %}
  <header>
         <div class="main_header">
             <!--header top start-->
@@ -21,8 +22,8 @@
 			<div class="col-lg-3 col-md-6">
 				<div class="logo">
 					<a href="{% url 'home' %}">
-                       {% load  static %}
-						<img src="{% static '/media/logo.png' %}" alt="">
+                       
+						<img src="{{ MEDIA_URL }}logo.png" alt="">
 						</a>
 					</div>
 				</div>
@@ -41,7 +42,7 @@
 									<a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 										<div class="text-center">
 											<div>
-												<img src="{% static '/media/user.png' %}" alt="">
+												<img src="{{ MEDIA_URL }}user.png" alt="">
 												</div>
 											</div>
 										</a>
@@ -65,7 +66,7 @@
 									<!--mini cart-->
 									<div class="mini_cart_wrapper">
 										<a href="{% url 'view_bag'%}">
-											<img src="{% static '/media/shopping-bag.png' %}" alt="">
+											<img src="{{ MEDIA_URL }}shopping-bag.png" alt="">
 											</a>
 											<span class="{% if bag_items %}cart_quantity-green{% else %}cart_quantity{% endif %}">
                              {% if product_count %}
