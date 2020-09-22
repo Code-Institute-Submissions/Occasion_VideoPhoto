@@ -1,0 +1,1 @@
+web: gunicorn occasion_Video_photo.wsgi:application
