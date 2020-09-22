@@ -21,7 +21,8 @@
 			<div class="col-lg-3 col-md-6">
 				<div class="logo">
 					<a href="{% url 'home' %}">
-						<img src="/media/logo.png" alt="">
+                       {% load  static %}
+						<img src="{% static '/media/logo.png' %}" alt="">
 						</a>
 					</div>
 				</div>
@@ -40,7 +41,7 @@
 									<a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 										<div class="text-center">
 											<div>
-												<img src="/media/user.png" alt="">
+												<img src="{% static '/media/user.png' %}" alt="">
 												</div>
 											</div>
 										</a>
@@ -64,7 +65,7 @@
 									<!--mini cart-->
 									<div class="mini_cart_wrapper">
 										<a href="{% url 'view_bag'%}">
-											<img src="/media/shopping-bag.png" alt="">
+											<img src="{% static '/media/shopping-bag.png' %}" alt="">
 											</a>
 											<span class="{% if bag_items %}cart_quantity-green{% else %}cart_quantity{% endif %}">
                              {% if product_count %}
