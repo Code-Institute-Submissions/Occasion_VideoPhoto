@@ -11,15 +11,15 @@ def contact(request):
         name = request.POST['name']
         email = request.POST['email']
         msg = request.POST['msg']
+        email_subject = "You have a new email from Occasion Video&Photo"
+        message_body = "Name: " + name + " Email: " + email + "Message: " + msg
 
         send_mail(
-            name,
-            msg,
-            email,
+            email_subject,
+            message_body,
             [settings.EMAIL_HOST_USER],
             fail_silently=False,
         )
-        messages.success(request,"Thank You For Contacting us, We Will get back to you shortly")
         return redirect("contact")
 
     return render(request, "contact/contact.html")   
