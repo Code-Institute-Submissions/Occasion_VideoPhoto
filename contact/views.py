@@ -18,7 +18,7 @@ def contact(request):
             email_subject,
             message_body,
             email,
-            ['EMAIL_HOST_USER'],
+            [settings.EMAIL_HOST_USER],
             fail_silently=False,
         )
         messages.success(request, "Thank You For Contacting us, We Will get back to you shortly")
