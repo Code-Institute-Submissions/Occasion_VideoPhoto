@@ -11,7 +11,7 @@ def contact(request):
         name = request.POST['name']
         email = request.POST['email']
         msg = request.POST['msg']
-        email_subject = "You have a new email from Occasion Video&Photo"
+        email_subject = "You have a new message from Occasion Video&Photo"
         message_body = "Name: " + name + " Email: " + email + "Message: " + msg
 
         send_mail(

@@ -21,23 +21,30 @@
 		<div class="container">
 			<div class="row justify-content-center mb-5">
 				<div class="col-lg-12">
-					<div class="account-contents" style="background: url('assets/img/about/about2.jpg'); background-size: cover;">
+					<div class="account-contents" style="background: url({{ MEDIA_URL }}contact_us.jpg); background-size: cover;">
                         <div class="row">
                             <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
                                 <div class="account-thumb">
                                     <h6 class="text-left">Request A</h6>
-                                    <span><h3 class="text-left">Free Contact</h3></span>
-                                <div class="contact_info">
-                                    <p>Address: <br> Prästgårdsgatan 13, <br> Sundbyberg, Sweden</p>
-                                        <p>Call us: <span>+4673XXXXXX</span></p>
-                                        <p>Mail us: <span> suport@occasionfotovideo.com</span></p>
-						        </div>
-                                </div>
+                                    <span><h3 class="text-left">Free Contact</h3></span><hr>
+								<div class="contact_info">
+									<div class="text-left">
+										<p><i class="fas fa-map-marker-alt mr-3"></i>Address:<br> Valkyriavägen 11, <br> Sundbyberg, Stockholm</p>
+									</div>
+									<div class="text-left">
+										<p><i class="fas fa-phone-alt mr-3"></i>Call us: <br><span>+4673XXXXXX</span></p>
+									</div>
+									<div class="text-left">
+										<p><i class="fas fa-at mr-3"></i>Mail us:<br><span> suport@occasionfotovideo.com</span></p>
+									</div>
+								</div>
+								</div>
                             </div>
                             <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
                                 <div class="account-content">
                                     <form action="{% url 'contact' %}" method="POST" enctype="multipart/form-data" >
                                     {% csrf_token %}
+                                    {{ form|crispy }}
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="single-acc-field">
