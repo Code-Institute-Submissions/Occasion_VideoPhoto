@@ -115,7 +115,7 @@ def edit_product(request, product_id):
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
-        messages.info(request, f'You are editing {product.get_name_categoryOccasion}')
+        messages.info(request, f'You are editing {product.get_name_categoryOccasion()}')
 
     template = 'products/edit_product.html'
     context = {
