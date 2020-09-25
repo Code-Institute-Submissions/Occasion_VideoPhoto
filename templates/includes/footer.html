@@ -1,18 +1,23 @@
-    <!--footer area start-->
-    <footer>
-<!-- Footer-Widgets -->
+
+ <footer>
     <div class="bg-footer_widget">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-4 footer_widget v-line">
+                <div class="col-lg-6 col-md-6 footer_widget v-line">
                     <div class="widget_inner">
-                        <div>
-                            <a href="index.html"><img src="./assets/images/156x46.png" alt="image" /></a>
+                        <div class="logo ">
+                            <a href="{% url 'home' %}"><img class="mb-3" src="{{ MEDIA_URL }}logo.png" alt="image" /></a>
+                         <div class="text-white">
+                                <ul>
+                                    <li><i class="fas fa-video mr-2"></i> We have quality.</li>
+                                    <li><i class="fas fa-video mr-2"></i> very good team with experience in filming and photography.</li>
+                                    <li><i class="fas fa-video mr-2"></i> All our equipment is high quality (4K).</li>
+                                    <li><i class="fas fa-video mr-2"></i> Our goal is you will be happy.</li>
+                                </ul>
+                            </div>
                         </div>
-                        <p>We invite anyone and everyone to attend our Sunday gatherings to celebrate God in song,
-                            scripture and prayer.</p>
                         <div>
-                            <div class="follow_us">
+                            <div class="follow_us mt-2">
                                 <ul>
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -23,9 +28,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 footer_widget v-line">
-                    <div class="widget_inner white_text">
-                        <h4>Contact Us</h4>
+                <div class="col-lg-6 col-md-6 footer_widget v-line pl-0">
+                    <div class="widget_inner text-white">
+                        <h4 class="mb-3"> <strong>Contact Us:</strong> </h4>
                         <p><i class="fas fa-map-marker-alt margin-padding-footer-contact-10"> </i> Valkyriavägen
                             111, 17469 Sundbyberg, Stockholm</p>
                         <p><i class="fas fa-at margin-padding-footer-contact-10"> </i> <a
@@ -33,13 +38,6 @@
                         <p><i class="fas fa-phone-alt margin-padding-footer-contact-10"> </i> +4673XXXXXXX</p>
                     </div>
                 </div>
-                <!-- Twitter API -->
-                <div class="col-lg-4 col-md-4 footer_widget white_text twitter-section">
-                    <h4>Latest Tweets</h4>
-                    <a class="twitter-timeline" data-link-color="#000" data-theme="dark" href="https://twitter.com/NinosZaiya"
-                        data-chrome="noheader nofooter noborders transparent noscrollbar" data-tweet-limit="1" dnt="true"></a>
-                </div>
-                <!--/Twitter API -->
             </div>
         </div>
     </div>
@@ -48,24 +46,12 @@
     <div class="footer_bottom">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 text-center">
+                <div class="col-md-10 text-center text-white">
                     <h5>&copy; Occasion Video&Photo 2020</h5>
-                </div>
-                <div class="col-md-2 text-right">
-                    <div id="back-top">
-                        <a href="#"><i class="fa fa-angle-up" aria-hidden="true"></i> </a>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- /Footer-Bottom -->
-    <!-- Jquery JS -->
-    <script src="https://code.jquery.com/jquery-3.5.0.js"
-        integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
-    <!--Main.JS-->
-    <script src="assets/js/main.js"></script>
-    <!--Twitt.JS-->
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 </footer>
-    <!--footer area end-->

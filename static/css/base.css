@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,700,700i,900,900i&amp;display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato:300|Oswald&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -12,8 +13,6 @@ body {
   min-height: 100%;
   overflow-x: hidden; 
   font-family: 'Lato';
-
-    
 }
 /* from Bulma */
 .icon {
@@ -1486,7 +1485,7 @@ div .non-list{
 .footer_bottom {
 	padding: 36px 0;
 	border-top: #ebebeb solid 1px;
-	background: #fafafa;
+	background: #1D1678;
 }
 .footer_bottom p {
 	margin: 0 auto;
@@ -1495,37 +1494,8 @@ div .non-list{
 	font-weight: 200;
 }
 
-#back-top {
-	text-align: center;
-}
-#back-top a {
-	display: block;
-	width: 40px;
-	height: 40px;
-	border-radius: 0px;
-	text-align: center;
-	line-height: 34px;
-	border: #25283a solid 1px;
-	color: #fff;
-	transition-duration: 0.3s;
-	-moz-transition-duration: 0.3s;
-	-o-transition-duration: 0.3s;
-	-webkit-transition-duration: 0.3s;
-	-ms-transition-duration: 0.3s;
-	font-size: 22px;
-	margin: 0 auto;
-	box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
-	background:#42525d;
-}
-#back-top a:hover {
-	background: rgb(37, 40, 58);
-	color: #fff;
-}
 .bg-footer_widget{
-    background-color: #42525d;
-}
-.bg-footer_widget h5,p{
-    color: #fafafa;
+    background-color: #3e51eb;
 }
 .footer_widget a{
     color: #fafafa;
@@ -1533,6 +1503,7 @@ div .non-list{
 .footer_widget p a:hover {
 	color: #3dc88f;
 }
+
 .footer_widget {
 	margin: 60px auto;
 	padding-bottom: 40px;
@@ -1569,6 +1540,32 @@ div .non-list{
 .margin-padding-footer-contact-10{
     margin-right: 10px;
     padding-bottom: 10px;
+}
+.follow_us ul {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	text-align: left;
+}
+.follow_us ul li:first-child{
+	margin:0px;
+}
+.follow_us .left-links{
+	text-align: right;
+}
+.follow_us ul li {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0px 0 0px 22px;
+}
+.follow_us ul li a {
+	color: #ffffff;
+	font-size: 15px;
+	padding: 7px 2px;
+	display: block;
+}
+.follow_us ul li a:hover {
+	color: #08307a;
 }
 
 
@@ -1904,7 +1901,16 @@ div .non-list{
   text-transform: capitalize;
   margin-bottom: 0;
 }
-
+	.follow_us ul li {
+		margin: 0px 0px 0px 18px;
+	}
+        .widget_inner {
+		padding: 0;
+	}
+	.footer_bottom p {
+		font-size: 14px;
+		line-height: 20px;
+	}
 }
   @media only screen and (max-width: 767px) {
     .main_header {
@@ -2139,7 +2145,9 @@ div .non-list{
         margin-left: 1px;
         text-align: center;
   }
-
+    .follow_us ul li {
+		margin: 0px 0 0px 10px;
+	}
 
   }
 
