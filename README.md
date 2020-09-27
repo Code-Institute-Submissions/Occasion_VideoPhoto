@@ -11,9 +11,9 @@ This application provides a eCommerce website that allows the consumer to browse
 The website has flat design. Navigation is easy to find category and sub-category names. The **search bar** placed in the header on all pages, allow for search by product name,descriptions,things include. 
 The **products page** displaying in a context. Reveal interesting product details in **details page** with so many things to consider, *descriptions, things include, rating* and Cart button in a good size, readable
 with a color that stands out from the rest of the page. Customer feedback is one thing to keep in mind when doing UX, so therefore I had the **contact page** when they have problems with payment, and if they are wondering or need more explanation for any products.
-Check out the **[Mockup](https://drive.google.com/)** that I have created as part of the design process and the design of **[database schema](https://drive.google.com/?target=_blank)**.
+Check out the **[Mockup](https://drive.google.com/file/d/1wNaWGxL8qOKg0pVDxfa1St1iYqkEodCT/view?usp=sharing)** that I have created as part of the design process and the design of **[database schema](https://drive.google.com/file/d/1THbnuPw8SWDmFhDM9OuU1RQYjQcgRtzM/view?usp=sharing)**.
 ### **User Stories**:
-I have put my user stories in a document you can check it out in here **[user stories](https://drive.google.com/).** 
+I have put my user stories in a document you can check it out in here **[user stories](https://drive.google.com/file/d/18DqR_RgDAsI-80bcEcClNI3gQysx8ZNc/view?usp=sharing).** 
 
 # **Features**
 
@@ -51,11 +51,11 @@ I have put my user stories in a document you can check it out in here **[user st
 - Websites like: ( **Stackoverflow** ,  **css-tricks** ,  **w3schools** ,  **github** ,  **youtube** ).
 
 # Testing:
-to do
+TO DO!!
 
 # Deployment:
 
-I have chosen to deploy my project in Heroku and AWS S3. Why? I need a server to put my static and media files and to handle the request which GitHub Pages cannot support at this moment. Heroku offers a lot of features and flexibility, all for free. Some of the benefits include:
+I have chosen to deploy my project in **Heroku** and **AWS S3**. Why? I need a server to put my static and media files and to handle the request which GitHub Pages cannot support at this moment. Heroku offers a lot of features and flexibility, all for free. Some of the benefits include:
 
 - Easy setup(deployment).
 - Good cooperation and communication using Git and heroku.
