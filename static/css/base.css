@@ -905,7 +905,23 @@ div .non-list {
 .remove-item {
   cursor: pointer;
 }
-
+.text-blue{
+  color: #3e51eb; 
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  font-family: arial;
+}
+ a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }
+ a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
 /*--End Products area --*/
 
 
@@ -1371,8 +1387,8 @@ div .non-list {
 }
 
 .price_box span.new_price {
-  color: #1D1678;
-  font-weight: 600;
+  color: #3e51eb;
+  font-weight: bold;
   font-size: 16px;
 }
 
