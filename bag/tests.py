@@ -1,5 +1,5 @@
 from django.test import TestCase
-from products.models import Product, Package, Occasion
+from products.models import Product
 
 # Create your tests here.
 
@@ -12,6 +12,7 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, 'bag/bag.html')
 
     def test_add_item_pag(self):
-        id = 1
-        response = self.client.post(f'/bag/add/ {id}')
+        product = Product.objects.create(description="test",
+                                         things_include="test1", price=500)
+        response = self.client.post(f'/bag/add/ {product.id}')
         self.assertEqual(response.status_code, 301)
