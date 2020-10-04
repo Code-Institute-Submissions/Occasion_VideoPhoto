@@ -51,7 +51,20 @@ I have put my user stories in a document you can check it out in here **[user st
 - Websites like: ( **Stackoverflow** ,  **css-tricks** ,  **w3schools** ,  **github** ,  **youtube** ).
 
 # Testing:
-TO DO!!
+After the Mentor Guidance Session 2 - Middle of project call. Initially, I got some feedback and I made a little change:
+- Has changed the word **bag** to **cart**.
+- Price color has changed to blue.
+- Profile - Order history page has separated to two separate pages(**Profile** and **Order History**).
+- Has changed products page by make each product as a link(card) and add a button(Add To Cart) for each peoduct in the page.
+- Refactoring the Code.
+
+### Django Testing Framework:
+Has made some Testing by using **Django testing framework** and create automated tests for all apps in the project by testing (views, forms, models).
+Django has a testing framework available that we can use to create automated tests.
+That ensure our application is working as expected. When we created created any app it provided us by default
+with a *tests.Python* file. Inside this file we'll find that Django imports the test case class. This class is an extension of the Python standard library module called unit tests.
+Which provides us with a bunch of methods to assert various things about our code. Such as assert equal assert true assert false and so on.
+
 
 # Deployment:
 
@@ -61,8 +74,9 @@ I have chosen to deploy my project in **Heroku** and **AWS S3**. Why? I need a s
 - Good cooperation and communication using Git and heroku.
 - Free hosting.
 
-### Deployment On Heroku And AWS S3:
+## Deployment On Heroku And AWS S3:
 
+### Heroku:
 Click New on the top right corner and select &quot;Create new app&quot;. Give the application a name (This will be included in the public URL for the application) and click Create app.
 Now we open the project in Gitpod. Login to Heroku through terminal. What we are doing here is we&#39;re creating a connection between our Gitpod application and Heroku that would allow us to push our changes using Git to update the application at any given time.
 Then, we create a new Git repository using git init. And then is add our files to the repository. And then we are going to associate the Heroku application as our master branch,
