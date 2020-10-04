@@ -12,7 +12,7 @@ def bag_contects(request):
 
     for item_id, quantity in bag.items():
         product = get_object_or_404(Product, pk=item_id)
-        new_prod_price = product.price * Decimal(settings.PRECENT_ADVANCE_PAYMENT_OF_FULL_PRICE) ## to get 30% av orginal price
+        new_prod_price = product.price * Decimal(settings.PRECENT_ADVANCE_PAYMENT_OF_FULL_PRICE)  #to get 30% av orginal price
         total_prod_price = Decimal(quantity * new_prod_price)
         total += quantity * new_prod_price
         product_count += quantity

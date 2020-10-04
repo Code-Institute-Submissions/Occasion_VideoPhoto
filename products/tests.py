@@ -46,4 +46,4 @@ class TestViews(TestCase):
 
     def test_category_string_method_returns_name(self):
         category = Category.objects.create(name='Test Category')
-        self.assertEqual(str(category), 'Test Category')    
+        self.assertEqual(str(category), 'Test Category')

@@ -97,6 +97,12 @@ body {
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   color: #fff;
 }
+/*hover menu color*/
+.dropdown-menu> li> a:hover{
+  background-color:#aed1f8 !important;
+  color:white; 
+}
+
 
 .header_top {
   background: #1d1678;
@@ -483,7 +489,9 @@ body {
 }
 
 .main_menu nav > ul > li ul.sub_menu li a:hover {
-  color: #1D1678;
+  color: rgb(32, 18, 230);
+  font-size: 15px;
+  font-weight: 400px;
 }
 
 .main_menu nav > ul > li.mega_items {

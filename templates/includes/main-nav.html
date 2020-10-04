@@ -86,7 +86,7 @@
 				</div>
             <!--header middel end-->
             <!--header bottom satrt-->
-            <div class="main_menu_area">
+            <div class="main_menu_area ">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-12 col-md-12">
@@ -94,8 +94,8 @@
                                 <nav>
                                     <ul>
                                         <li><a href="{% url 'home' %}">home</a></li>
-                                        <li><a class="active" href="{% url 'products'%}">Products<i class="fa fa-angle-down"></i></a>
-                                            <ul class="sub_menu pages non-list">
+                                        <li><a class="active " href="{% url 'products'%}">Products<i class="fa fa-angle-down"></i></a>
+                                            <ul class="sub_menu non-list">
                                                 <li><a href="{% url 'products' %}?sort=price&direction=acs">By Price</a></li>
                                                 <li><a href="{% url 'products' %}?sort=rating&direction=desc">By Rating</a></li>
                                                 <li><a href="{% url 'products' %}?sort=category&direction=acs">By Category</a></li>
@@ -103,7 +103,7 @@
                                             </ul>
                                         </li>
                                         <li><a class="active" href="{% url 'products'%}?category=video">Video <i class="fa fa-angle-down"></i></a>
-                                            <ul class="sub_menu pages non-list">
+                                            <ul class="sub_menu non-list">
                                                 <li><a href="{% url 'products' %}?occasion=wedding&category=video">Wedding</a></li>
                                                 <li><a href="{% url 'products'%}?occasion=engagement&category=video">Engagement</a></li>
                                                 <li><a href="{% url 'products'%}?occasion=baptism&category=video">Baptism</a></li>
@@ -112,7 +112,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="{% url 'products'%}?category=photo">Photo<i class="fa fa-angle-down"></i></a>
-                                            <ul class="sub_menu pages non-list">
+                                            <ul class="sub_menu non-list">
                                                  <li><a href="{% url 'products'%}?occasion=wedding&category=photo">Wedding</a></li>
                                                 <li><a href="{% url 'products'%}?occasion=engagement&category=photo">Engagement</a></li>
                                                 <li><a href="{% url 'products'%}?occasion=baptism&category=photo">Baptism</a></li>

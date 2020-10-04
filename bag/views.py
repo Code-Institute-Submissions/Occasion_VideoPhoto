@@ -16,9 +16,9 @@ def add_to_bag(request, item_id):
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    bag = request.session.get('bag', {}) ## Trying to get session(bag) variable if it already exists and initializing it to an empty dictionary if it doesn't.
+    bag = request.session.get('bag', {})  # Trying to get session(bag) variable if it already exists and initializing it to an empty dictionary if it doesn't.
 
-    if item_id in list(bag.keys()): ## first check to see if there's a bag variable in the session.
+    if item_id in list(bag.keys()):  # first check to see if there's a bag variable in the session.
         bag[item_id] += quantity
         messages.success(request, f'Update {product.category.friendly_name} - {product.occasion.friendly_name} quantuty to {bag[item_id]}')
     else:

@@ -15,4 +15,3 @@ class TestViews(TestCase):
         self.client.login(username='test123', password='test1')
         response = self.client.get(reverse('account_login'))
         self.assertEqual(response.status_code, 200)
-

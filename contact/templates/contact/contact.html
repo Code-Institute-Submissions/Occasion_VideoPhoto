@@ -1,81 +1,85 @@
-
 {% extends "base.html"%}
- {% load static %}
+{% load static %}
 
 {% block page_header %}
-	<div class="container header-container">
-		<div class="row">
-			<div class="col"></div>
-		</div>
+<div class="container header-container">
+	<div class="row">
+		<div class="col"></div>
 	</div>
+</div>
 {% endblock %}
 
- {% block content %}
- <div class="overlay"></div>
-	<div class="container-fluid">
-        <div class="row">
-            <div class="col text-center mt-5">
-                <h1 class="logo-font mb-5 text-contact-us">Contact Us</h1>
-            </div>
-        </div>
-		<div class="container">
-			<div class="row justify-content-center mb-5">
-				<div class="col-lg-12">
-					<div class="account-contents" style="background: url({{ MEDIA_URL }}contact_us.jpg); background-size: cover;">
-                        <div class="row mb-5">
-                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
-                                <div class="account-thumb">
-                                    <h6 class="text-left">Request A</h6>
-                                    <span><h3 class="text-left">Free Contact</h3></span><hr>
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col text-center mt-5">
+			<h1 class="logo-font mb-5 text-contact-us">Contact Us</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row justify-content-center mb-5">
+			<div class="col-lg-12">
+				<div class="account-contents"
+					style="background: url({{ MEDIA_URL }}contact_us.jpg); background-size: cover;">
+					<div class="row mb-5">
+						<div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+							<div class="account-thumb">
+								<h6 class="text-left">Request A</h6>
+								<span><h3 class="text-left">Free Contact</h3></span>
+								<hr>
 								<div class="contact_info">
 									<div class="text-left">
-										<p><i class="fas fa-map-marker-alt mr-3"></i>Address:<br> Valkyriavägen 11, <br> Sundbyberg, Stockholm</p>
+										<p><i class="fas fa-map-marker-alt mr-3"></i>Address:<br> Valkyriavägen 11,
+											<br> Sundbyberg, Stockholm</p>
 									</div>
 									<div class="text-left">
-										<p><i class="fas fa-phone-alt mr-3"></i>Call us: <br><span>+4673XXXXXX</span></p>
+										<p><i class="fas fa-phone-alt mr-3"></i>Call us: <br><span>+4673XXXXXX</span>
+										</p>
 									</div>
 									<div class="text-left">
-										<p><i class="fas fa-at mr-3"></i>Mail us:<br><span> suport@occasionfotovideo.com</span></p>
+										<p><i class="fas fa-at mr-3"></i>Mail
+											us:<br><span> suport@occasionfotovideo.com</span></p>
 									</div>
 								</div>
-								</div>
-                            </div>
-                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
-                                <div class="account-content">
-                                    <form action="{% url 'contact' %}" method="POST" enctype="multipart/form-data" >
-                                    {% csrf_token %}
-                                    {{ form|crispy }}
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="single-acc-field">
-                                                    <label for="name">Name</label>
-                                                    <input type="text" placeholder="Name" name="name" required>
+							</div>
+						</div>
+						<div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+							<div class="account-content">
+								<form action="{% url 'contact' %}" method="POST" enctype="multipart/form-data">
+									{% csrf_token %}
+									{{ form|crispy }}
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="single-acc-field">
+												<label for="name">Name</label>
+												<input type="text" placeholder="Name" name="name" required>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="single-acc-field">
-                                                    <label for="email">Email</label>
-                                                    <input type="email" placeholder="Email" name="email" required>
+											</div>
+											<div class="col-lg-6">
+												<div class="single-acc-field">
+													<label for="email">Email</label>
+													<input type="email" placeholder="Email" name="email" required>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-12">
-                                                <div class="single-acc-field">
-                                                    <label for="msg">Message</label>
-                                                    <textarea name="msg" rows="4" required></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="single-acc-field">
-                                            <button type="submit">Send Message</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+												</div>
+												<div class="col-lg-12">
+													<div class="single-acc-field">
+														<label for="msg">Message</label>
+														<textarea name="msg" rows="4" required></textarea>
+													</div>
+												</div>
+											</div>
+											<div class="single-acc-field">
+												<button type="submit">Send Message</button>
+											</div>
+								</form>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
- {% endblock %} 
+{% endblock %}

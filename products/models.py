@@ -16,7 +16,7 @@ class Category(models.Model):
         return self.name
 
     def get_friendly_name(self):
-        return self.friendly_name     
+        return self.friendly_name
 
 
 class Occasion(models.Model):
@@ -27,7 +27,7 @@ class Occasion(models.Model):
         return self.name
 
     def get_friendly_name(self):
-        return self.friendly_name    
+        return self.friendly_name
 
 
 class Package(models.Model):
@@ -66,5 +66,3 @@ class Product(models.Model):
 
     def get_new_price(self):
         return round(self.price * Decimal(settings.PRECENT_ADVANCE_PAYMENT_OF_FULL_PRICE), 0)
-    
-        
