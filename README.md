@@ -105,10 +105,18 @@ For this, we're going to use **Amazon Web Services s3** and create an AWS accoun
 3. **Public Access**: Set the list objects permission for everyone under the Public Access section.
 4. **Create a user to access Bucket**: Through service called IAM which stands for Identity and Access Management. first create a group for our user to live in.Then create an access policy giving the group access to the s3 bucket we created.
 And finally, assign the user to the group so it can use the policy to access all our files.
-5. **Connecting Django To S3**: To do this we'll need to install two new packages on our Django project **boto3** And **django-storages**. We need to add some settings in settings file
-to tell it which bucket it should be communicating with.
-6. **AWS Keys**: Let's go to Heroku and add our AWS keys to the config variables.
-7. **Add media files to s3**: On s3, create a new folder called media.
+5. **Connecting Django To S3**: To do this we'll need to install two new packages on our Django project **boto3** And **django-storages**.
+    - We need to add some settings in settings file to tell it which bucket it should be communicating with.
+    - We'll only want to do this on Heroku, add an if statement to check if there's an environment variable called USE_AWS in the environment.If so let's define the AWS_STORAGE_BUCKET_NAME and
+       The AWS_S3_REGION_NAME And our access key, and secret access key, which we'll get from the environment. And our access key, and secret access key, which we'll get from the environment.
+    - Set USE_AWS key to true. So that our settings file knows to use the AWS configuration when we deploy to Heroku.
+    - In our settings file. We need to tell django where our static files will be coming from in production. Which is going to be our bucket_name.s3.amazonaws.com .
+6. **Custom storages**: To tell django that in production we want to use s3 to store our static files whenever someone runs collectstatic. And that we want any uploaded product images to go there also.
+To do that let's create a file called custom storages.
+And import both our settings from django.conf as well as the s3boto3 storage class from django storages which we just installed.
+7. **Static files**: So in effect when the USE_AWS setting is true. Whenever collectstatic is run. Static files will be collected into a static folder in our s3 bucket.       
+8. **AWS Keys**: Let's go to Heroku and add our AWS keys to the config variables. It's very important to keep these two keys secret.
+9. **Add media files to s3**: On s3, create a new folder called media.
 Inside it, I'll click upload. Add files. And then select all the product images.
 
 
