@@ -36,6 +36,11 @@ I have put my user stories in a document you can check it out in here **[user st
 # Technologies Used:
 
 - Codeinstitute: materials and homework and projector during the lesson.
+- Stripe: API payment system.
+- Amazon Web Services(AWS S3).
+- Heroku: is a cloud platform for deploying.
+- Postgres: is a relational database.
+- Git: is a distributed version control system.
 - Balsamiq Mockups: Sketch and make UI Design for the website.
 - HTML: by using HTML language to markup web pages in this project.
 - CSS: to perform style for the WepApp.
